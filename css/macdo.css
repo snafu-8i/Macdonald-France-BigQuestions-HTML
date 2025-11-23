@@ -1,0 +1,1929 @@
+@font-face {
+    font-family: "Speedee Bold";
+    src: url("https://db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot");
+    src: url("https://db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.svg#Speedee Bold")format("svg");
+}
+@font-face{
+    font-family:"Speedee_regular";
+    src:url(../font/Speedee-Regular.ttf);
+}
+:root{
+    font-size: 20px;
+}
+body{
+    margin:0;
+}
+#navigation{
+    display:block;
+    position:sticky;
+    top:0%;
+    text-align:center;
+    caret-color:transparent;
+    background-color:white;
+    outline-style:solid;
+    outline-color:rgba(0, 0, 0, 0.12);
+    outline-width:0.03rem;
+    z-index:100;
+    font-size:0.8rem; 
+    font-family:"Speedee_regular",Arial,sans-serif;
+}
+#navigation ul{
+    margin:0;
+    padding:0;
+    display:block;
+    list-style-type:none;
+    text-align: center;
+}
+.list-items{
+    display:inline-block; 
+}
+.list-items a{
+    display:inline-block;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+}
+.list-items:hover::after{
+    width: 100%;
+}
+.list-items::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: rgb(36, 116, 12);
+    transition: 300ms;
+}
+.nav1{
+    animation-name:list-items-anim-reverse;
+    animation-duration:0.2s;
+    animation-timing-function: ease-out;
+    animation-play-state:running;
+    animation-fill-mode: forwards;
+}
+.list-items:hover .nav1{
+    animation-name: list-items-anim;
+    animation-duration:0.2s;
+    animation-timing-function: ease-out;
+    animation-play-state:running;
+    animation-fill-mode: forwards; 
+}
+.nav2{
+    animation-name:list-items-anim2-reverse;
+    animation-duration:0.2s;
+    animation-timing-function: ease-out;
+    display:block;
+    position:absolute;
+    color:transparent;
+    pointer-events: none;
+    user-select: none;
+}
+.list-items:hover .nav2{
+    display:block;
+    color:transparent;
+    position:absolute;
+    animation-name: list-items-anim2;
+    animation-duration:0.2s;
+    animation-timing-function: ease-out;
+    animation-play-state:running;
+    animation-fill-mode: forwards; 
+}
+@keyframes list-items-anim{
+    0%{
+        transform:translateY(0rem);
+        color:black;
+    }
+    80%{
+        color:transparent;
+    }
+    100%{
+        transform:translateY(-1rem);
+        color:transparent;
+    }
+}
+@keyframes list-items-anim-reverse{
+    0%{
+        transform:translateY(-1rem);
+        color:transparent;
+    }
+    80%{
+        color:rgba(0, 0, 0, 0.856);
+    }
+    100%{
+        transform:translateY(0rem);
+        color:rgba(0, 0, 0, 0.856);
+    }
+}
+@keyframes list-items-anim2{
+    0%{
+        transform:translateY(-1.85rem);
+        color:transparent;
+        font-weight:bold;
+    }
+    80%{
+        display:block;
+        color:black;
+    }
+    100%{
+        display:block;
+        transform:translateY(-2.5rem);
+        color:black;
+        font-weight:bold;
+    }
+}
+@keyframes list-items-anim2-reverse{
+    0%{
+        display:block;
+        transform:translateY(-2.5rem);
+        color:black;
+        font-weight:bold;
+    }
+    80%{
+        display:block;
+        color:transparent;
+        font-weight:bold;
+    }
+    100%{
+        transform:translateY(-1.85rem);
+        color:transparent;
+        font-weight:bold;
+    }
+}
+
+.iconed{
+    display:inline-block;
+    margin-left:0.2rem;
+    margin-right:0.2rem;
+}
+.iconed a{
+    display:block;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right:1.3rem;
+    padding-left:1.3rem;
+    text-decoration: none;
+    color:black;
+}
+.list-items-drop{
+    display:inline-block;
+}
+.list-items-drop a{
+    display:block;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right:1.3rem;
+    padding-left:1.3rem;
+    text-decoration: none;
+    color:black;
+}
+#Les-Big-Questions{
+    box-shadow: 0 -0.1rem 0 0 rgb(36, 116, 12) inset;
+}
+.bar{
+    display:inline-block;
+    color:rgba(0, 0, 0, 0.479);
+    margin-left:0.2rem;
+    margin-right:0.2rem;
+}
+#logo{
+    color:transparent;
+    user-select: none;
+    background: url(../img/logo-mcdonalds-1024x640.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    height:2rem;
+    width:0.3rem;
+}
+#glass{
+    color:transparent;
+    user-select: none;
+    background: url(../img/glass.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:45%;
+}
+#localisation{
+    color:transparent;
+    user-select: none;
+    background: url(../img/localisation.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:45%;
+}
+.list-items-connect{
+    display:inline-block;
+    margin-right:-0.65rem;
+}
+.list-items-connect a{
+    display:block;
+    text-decoration: none;
+    color:black;
+}
+.list-items-connect:hover{
+    transition:0.3s;
+    background-color: rgba(165, 165, 165, 0.15);
+}
+#seconnecter{
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius:5%;
+    padding-right:0.9rem;
+    padding-left:0.9rem;
+    font-size:0.67rem;
+}
+.list-items-command{
+    display:inline-block;
+    margin-left: 1.3rem;
+}
+.list-items-command a{
+    display:block;
+    text-decoration: none;
+    color:black;
+}
+#commander:hover{
+    transition:0.3s;
+    background-color: rgb(252, 181, 3);
+    border: 1px solid rgb(252, 181, 3);
+}
+#commander{
+    position:relative;
+    background-color: rgb(255, 193, 36);
+    border: 1px solid rgb(255, 193, 36);
+    border-radius:5%;
+    padding-right:0.9rem;
+    padding-left:0.9rem;
+    font-size:0.67rem;
+}
+#yellow img{
+    width:0.8rem;
+    margin-right:0.6rem;
+    transform:translateY(0.1rem);
+}
+.links{
+    display:none;
+}
+.linked{
+    display:none;
+}
+#drop1{
+    display:none;
+}
+#drop2{
+    margin:0.5rem;
+}
+#drop3{
+    display:none;
+}
+@media (min-width:983px){
+    .dropdown{
+        display:none;
+    }
+    #account{
+        display:none;
+    }
+    #barres{
+        display:none;
+    } 
+}
+@media (max-width:100%){
+    .dropdown{
+        display:none;
+    }
+}
+@media (max-width: 1216px){
+    .list-items a{
+        padding-left: 0.7rem;
+        padding-right:0.7rem;
+    } 
+}
+@media (max-width: 1156px){
+    .list-items a{
+        padding-left: 0.4rem;
+        padding-right:0.4rem;
+    } 
+}
+@media (max-width: 1096px){
+    .list-items a{
+        padding-left: 0.2rem;
+        padding-right:0.2rem;
+    } 
+}
+@media (max-width:1056px){
+    #navigation ul{
+        text-align:center;
+        width:100%;
+    }
+    .bar{
+        display:none;
+    }
+    .list-items{
+        display:none;
+    }
+    .list-items-connect{
+        display:none;
+    }
+    .list-items-command{
+        display:none;
+    }
+    #drop1{
+        display:inline-block;
+        position:relative;
+        background: url(../img/barres.png);
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+    #drop1 div{
+        padding-top:0.9rem;
+        padding-bottom: 0.9rem;
+        padding-right:0.9rem;
+        padding-left:0.9rem;
+        cursor:pointer ;
+    }
+    #tro{
+        user-select: none;
+        color:transparent;
+    }
+    #drop1:hover .links{
+        width:97vw;
+        height:200vw;
+        background-color: white;
+        cursor:default;
+        display:block;
+        position:absolute;
+        top:100%;
+        left:-60%;
+        padding-top:0rem;
+        padding-right:1.5rem;
+        padding-left:1rem;
+        padding-bottom:0rem;
+    }
+    .links2{
+        color:black;
+        display:block;
+        text-align: left;
+        font-size: 1rem;
+        font-family:"Speedee_regular",Arial,sans-serif;
+        white-space: nowrap;
+        margin-bottom:0.5rem;
+        margin-top:0.5rem;
+    }
+    #drop-commander{
+        background-color:rgb(255, 193, 36);
+        border-radius:4px;
+        text-align:center;
+        margin-left:2vw;
+        margin-right:2vw;
+    }
+    #drop2{
+        display:inline-block;
+        margin-right:38vw;
+        margin-left:40.5vw;
+    }
+    #drop3{
+        display:inline-block;
+        position:relative;
+        cursor:pointer;
+        background: url(../img/account.png);
+        background-repeat: no-repeat;
+        background-position:center;
+        padding:1rem;
+        background-size:70%;
+    }
+    #drop3:hover .linked{
+        cursor:default;
+        display:inline-block;
+        position:absolute;
+        top:100%;
+        right:0%;
+        padding-top:0rem;
+        padding-bottom:0rem;
+    }
+    #tro1{
+        user-select: none;
+        color:transparent;
+    }   
+    .iconed{
+        display:none;
+    }
+}
+@media (max-width:921px){
+    #drop2{
+        margin-right:37vw;
+        margin-left:39vw;
+    }
+}
+@media (max-width:825px){
+    #drop2{
+        margin-right:34vw;
+        margin-left:37vw;
+    }
+}
+@media (max-width:683px){
+    #drop2{
+        margin-right:32vw;
+        margin-left:35vw;
+    }
+}
+@media (max-width:599px){
+    #drop2{
+        margin-right:28.5vw;
+        margin-left:32vw;
+    }
+}
+@media (max-width:501px){
+    #drop2{
+        margin-right:24vw;
+        margin-left:28vw;
+    }
+}
+@media (max-width:413px){
+    #drop2{
+        margin-right:18vw;
+        margin-left:23vw;
+    }
+}
+@media (max-width:335px){
+    #drop2{
+        margin-right:18vw;
+        margin-left:18vw;
+    }
+}
+@media (max-width:309px){
+    #drop2{
+        margin-right:15vw;
+        margin-left:15vw;
+    }    
+}
+@media (max-width:309px){
+    #drop2{
+        margin-right:12vw;
+        margin-left:12vw;
+    }
+} 
+
+
+/*BIQ QUESTIONS*/
+
+#container1{
+    text-align:center;
+    font-family: "Speedee Bold",Arial,sans-serif;
+    caret-color: transparent;
+    color:rgba(0, 0, 0, 0.76);
+}
+#bigquestions1{
+    margin-top: 8rem;
+    width:29.5rem;
+    font-size:1.4rem;
+    margin-right:auto;
+    margin-left:auto;
+}
+#bigquestions2{
+    margin-top: 2rem;
+    width:25rem;
+    font-size:2.6rem;
+    margin-right:auto;
+    margin-left:auto;
+}
+#bigquestions2 mark{
+    background-color: rgba(255, 193, 36, 0.432);
+    color:rgba(0, 0, 0, 0.76);
+}
+#composition{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    font-family:"Speedee Bold",Arial,sans-serif;
+    margin-right:auto;
+    margin-left:auto;
+    width:50rem;
+}
+#macnuggets{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    font-size:1.85rem;
+    color:rgba(0, 0, 0, 0.63);
+    width:48%;
+    border-radius:1rem;
+    background-color:rgb(255, 193, 36);
+}
+#macnuggets:hover{
+    cursor:pointer;
+}
+#macnuggets:hover #plus img{
+    filter:invert();
+}
+#macnuggets:hover #full-black-circle img{ 
+    opacity:100%;
+    z-index:2;
+}
+#macnuggets p{
+    margin-top:4rem;
+    margin-bottom:2.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    width:80%;
+}
+#macnuggets-img{
+    text-align:center;
+    margin-bottom:1rem;
+}
+#macnuggets-mark{
+    background-color: rgb(255, 221, 135);
+    color:rgba(0, 0, 0, 0.63);
+}
+#macnuggets-mark-behind{
+    background-color: rgb(255, 221, 135);
+    color:rgba(0, 0, 0, 0.63);
+}
+#pain{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    color:white;
+    width:48%;
+    border-radius:1rem;
+    background-color:rgb(26, 75, 24);
+    font-size:1.85rem;
+}
+#pain p{
+    margin-top:4rem;
+    margin-bottom:2.5rem;
+    width:75%;
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+}
+#pain-img{
+    text-align:center;
+    margin-bottom:1rem;
+}
+#pain:hover{
+    cursor:pointer;
+}
+#pain:hover #plus-r img{
+    filter:invert();
+}
+#pain:hover #full-black-circle-r img{
+    opacity: 100%;
+    z-index:2;
+}
+
+#burger{
+    position:relative;
+    flex-wrap:wrap;
+    color:white;
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+    border-radius:1rem;
+    background-color:rgba(0, 0, 0, 0.849);
+    font-size:3rem;
+    z-index:5;
+}
+#burger span{
+    display:flex;
+}
+#burger p{
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:5.5rem;
+    margin-bottom:8rem;
+    text-align: center;
+    width:40%;
+}
+#burger-img{
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:8rem;
+    margin-bottom:8rem;
+}
+#burger:hover{
+    cursor:pointer;
+}
+#burgerdiv{
+    display:flex;
+    background-color:rgba(0, 0, 0, 0.849);
+    border-radius:1rem;
+    z-index:0;
+}
+#burger:hover #full-white-circle-burger img{
+    opacity: 100%;
+    z-index:2;
+}
+#burger:hover #plus-burger img{
+    filter:invert();
+}
+
+#steak{
+    position:relative;
+    display:block;
+    font-size:1.85rem;
+    width:48%;
+    border-radius:1rem;
+    color:white;
+    background-color:rgb(49, 73, 150);
+}
+#steak p{
+    margin-top:4rem;
+    margin-bottom:2.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    width:80%;
+}
+#steak-img{
+    text-align: center;
+    margin-bottom:1rem;
+}
+#steak:hover{
+    cursor:pointer;
+}
+#steak:hover #full-black-circle-r img{
+    opacity:100%;
+    z-index:2;
+}
+#steak:hover #plus-r img{
+    filter:invert();
+}
+
+#frites{
+    position:relative;
+    display:block;
+    font-size:1.85rem;
+    width:48%;
+    border-radius:1rem;
+    color:white;
+    background-color:rgba(104, 18, 116, 0.795);
+}
+#frites p{
+    margin-top:4rem;
+    margin-bottom:2.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    width:80%;
+}
+#frites-img{
+    text-align: center;
+    margin-bottom:1rem;
+}
+#frites:hover{
+    cursor:pointer;
+}
+#frites:hover #full-black-circle-r img{
+    opacity:100%;
+    z-index:2;
+}
+#frites:hover #plus-r img{
+    filter:invert();
+}
+
+#chef{
+    margin-top:5rem;
+}
+.cross{
+    position:absolute;
+    bottom:0.5%;
+    left:45%;
+}
+.cross img{
+    width:3.75rem;
+}
+.cross div{
+    text-align: center;
+}
+#full-black-circle{
+    position:absolute;
+    top:2%;
+    left:16%;
+}
+#full-black-circle img{
+    opacity:0;
+    width:2.5rem;
+}
+#plus{
+    position:absolute;
+    left:0.627rem;
+    bottom:-0.18vw;
+    z-index:3;
+}
+#plus img{
+    width:2.5rem;
+}
+.cross-r{
+    filter:invert();
+    position:absolute;
+    bottom:0.5%;
+    left:45%;
+}
+.cross-r img{
+    width:3.75rem;
+}
+.cross-r div{
+    text-align: center;
+}
+#full-black-circle-r{
+    position:absolute;
+    top:2%;
+    left:16%;
+}
+#full-black-circle-r img{
+    opacity:0;
+    width:2.5rem;
+}
+#plus-r{
+    position:absolute;
+    left:0.627rem;
+    bottom:-0.18vw;
+    z-index:3;
+}
+#plus-r img{
+    width:2.5rem;
+}
+
+#cross-burger{
+    margin-right:auto;
+    margin-left:auto;
+    filter:invert();
+    position:absolute;
+    bottom:0.5%;
+    left:45%;
+}
+#cross-burger img{
+    width:3.75rem;
+}
+#full-white-circle-burger{
+    position:absolute;
+    top:-2%;
+    left:17%;
+}
+#full-white-circle-burger img{
+    opacity:0;
+    width:2.5rem;
+}
+#plus-burger{
+    position:absolute;
+    left:0.627rem;
+    bottom:-0.18vw;
+    z-index:3;
+}
+#plus-burger img{
+    width:2.5rem;
+}
+
+
+#card1{
+    display:none;
+}
+#card1:checked~#macnuggets{
+    cursor:default;
+}
+#card1:checked~#macnuggets p{
+    transform:rotate3d(0,1,0,180deg);
+    transition:0.5s;
+    color:transparent;
+    visibility:hidden;
+}
+#card1:not(:checked)~#macnuggets p{
+    color:rgba(0, 0, 0, 0.63);
+    transform:rotate3d(0,1,0,0deg);
+    transition:0.5s;
+}
+#card1:checked~#macnuggets mark{
+    color:transparent;
+    transition:0.5s;
+    background-color:transparent;
+}
+#card1:not(:checked)~#macnuggets mark{
+    background-color: rgb(255, 221, 135);
+    transform:rotate3d(0,1,0,0deg);
+    transition:0.5s;
+}
+#card1:checked~#macnuggets img{
+    animation-name:card-img;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img{
+    99%{
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+    100%{
+        visibility: hidden;
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+}
+#card1:not(:checked)~#macnuggets img{
+    animation-name:card-img-reverse;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-reverse{
+    0%{
+        opacity:0;
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    99%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        opacity:100%;
+    }
+    100%{
+        visibility: visible;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card1-back{
+    position:block;
+    position:absolute;
+    top:0;
+}
+#card1-1-back{ 
+    color:rgba(0, 0, 0, 0.836);
+    font-family: "Speedee_regular",Arial,sans-serif;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-top:4rem;
+    margin-bottom:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:0.8rem;
+}
+#card1-2-back{
+    color:rgba(0, 0, 0, 0.712);
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:1.35rem;
+}
+#card1-3-back{
+    color:rgba(0, 0, 0, 0.712);
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:1.35rem;
+}
+#card1-1-back span{
+    font-size:0.8rem;
+}
+#card1-4-back{
+    margin-top:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    transform:rotate3d(0,1,0, 180deg);
+    width:80%;
+    color:rgba(0, 0, 0, 0.712);
+}
+#card1-4-back-a{
+    padding:1rem 2.3rem 1rem 2.3rem;
+    color:rgba(0, 0, 0, 0.712);
+    margin-right:auto;
+    margin-left:auto;
+    text-decoration:none;
+    font-size:0.8rem;
+    border-radius:4px;
+    border:1px solid rgba(0, 0, 0, 0.712);
+}
+#card1-4-back-a:hover{
+    border-width: 2px;
+    margin:-1px;
+}
+#card1:checked~#macnuggets div{
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: 0.5s;
+}
+#card1:not(:checked)~#macnuggets div{
+    visibility: hidden;
+    color:transparent;
+    transition:0.5s;
+}
+#card1:checked~#macnuggets span{
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: 0.5s;
+    background-color: rgb(255, 221, 135);
+    color:rgba(0, 0, 0, 0.63);
+}
+#card1:not(:checked)~#macnuggets span{
+    color:transparent;
+    background-color: transparent;
+    transition:0.5s;
+}
+#card1:checked~#macnuggets a{
+    animation-name:card-img-button-reverse-macnuggets;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-reverse-macnuggets{
+    0%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+    100%{
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card1:not(:checked)~#macnuggets a{
+    animation-name:card-img-button-macnuggets;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-macnuggets{
+    0%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        color:rgba(0, 0, 0, 0.712);
+        border:1px solid rgba(0, 0, 0, 0.712);
+    }
+    100%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+}
+
+
+#card2{
+    display:none;
+}
+#card2:checked~#pain{
+    cursor:default;
+}
+#card2:checked~#pain p{
+    transform:rotate3d(0,1,0,180deg);
+    transition:0.5s;
+    color:transparent;
+    visibility:hidden;
+}
+#card2:not(:checked)~#pain p{
+    transform:rotate3d(0,1,0,0deg);
+    transition:0.5s;
+}
+#card2:checked~#pain img{
+    animation-name:card-img-pain;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-pain{
+    99%{
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+    100%{
+        visibility: hidden;
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+}
+#card2:not(:checked)~#pain img{
+    animation-name:card-img-reverse-pain;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-reverse-pain{
+    0%{
+        opacity:0;
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    99%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        opacity:100%;
+    }
+    100%{
+        visibility: visible;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card2-back{
+    position:block;
+    position:absolute;
+    top:0;
+}
+#card2-1-back{ 
+    color:white;
+    font-family: "Speedee_regular",Arial,sans-serif;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-top:4rem;
+    margin-bottom:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:0.8rem;
+}
+#card2-2-back{
+    color:white;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:1.35rem;
+}
+#card2-4-back{
+    margin-top:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    transform:rotate3d(0,1,0, 180deg);
+    width:80%;
+    color:white;
+}
+#card2-4-back-a{
+    padding:1rem 2.3rem 1rem 2.3rem;
+    color:white;
+    margin-right:auto;
+    margin-left:auto;
+    text-decoration:none;
+    font-size:0.8rem;
+    border-radius:4px;
+    border:1px solid white;
+}
+#card2-4-back-a:hover{
+    border-width: 2px;
+    margin:-1px;
+}
+#card2:checked~#pain div{
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: 0.5s;
+}
+#card2:not(:checked)~#pain div{
+    visibility: hidden;
+    color:transparent;
+    transition:0.5s;
+}
+#card2:checked~#pain a{
+    animation-name:card-img-button-reverse-pain;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-reverse-pain{
+    0%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+    100%{
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card2:not(:checked)~#pain a{
+    animation-name:card-img-button-pain;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-pain{
+    0%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        color:white;
+        border:1px solid white;
+    }
+    100%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+}
+
+
+#card3{
+    display:none;
+}
+#card3:checked~#burger span{
+    transform:rotate3d(0,1,0,180deg);
+    transition:0.5s;
+}
+#card3:not(:checked)~#burger span{
+    transform:rotate3d(0,1,0,0deg);
+    transition:0.5s;
+}
+#card3:checked~#burger{
+    cursor:default;
+}
+#card3:checked~#burger p{
+    transition:0.5s;
+    color:transparent;
+    visibility:hidden;
+}
+#card3:not(:checked)~#burger p{
+    transition:0.5s;
+}
+#card3:checked~#burger img{
+    animation-name:card-img-burger;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-burger{
+    99%{
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+    100%{
+        visibility: hidden;
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+}
+#card3:not(:checked)~#burger img{
+    animation-name:card-img-reverse-burger;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-reverse-burger{
+    0%{
+        opacity:0;
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    99%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        opacity:100%;
+    }
+    100%{
+        visibility: visible;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card3-back{
+    position:block;
+    position:absolute;
+    top:0;
+}
+#card3-1-back{ 
+    color:white;
+    font-family: "Speedee_regular",Arial,sans-serif;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-top:4rem;
+    margin-bottom:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    width:90%;
+    font-size:0.8rem;
+}
+#card3-2-back{
+    color:white;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-right:auto;
+    margin-left:auto;
+    width:90%;
+    font-size:1.35rem;
+}
+#card3-3-back{
+    color:white;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-right:auto;
+    margin-left:auto;
+    width:90%;
+    font-size:1.35rem;
+}
+#card3-4-back{
+    margin-top:0.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    transform:rotate3d(0,1,0, 180deg);
+    width:90%;
+    color:white;
+}
+#card3-4-back-a{
+    padding:1rem 2.3rem 1rem 2.3rem;
+    color:white;
+    margin-right:auto;
+    margin-left:auto;
+    text-decoration:none;
+    font-size:0.8rem;
+    border-radius:4px;
+    border:1px solid white;
+}
+#card3-4-back-a:hover{
+    border-width: 2px;
+    margin:-1px;
+}
+#card3:checked~#burger div{
+    transform: rotate3d(0, 1, 0, 180deg);
+    transition: 0.5s;
+}
+#card3:not(:checked)~#burger div{
+    visibility: hidden;
+    color:transparent;
+    transition:0.5s;
+}
+#card3:checked~#burger a{
+    animation-name:card-img-button-reverse-burger;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-reverse-burger{
+    0%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+    100%{
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card3:not(:checked)~#burger a{
+    animation-name:card-img-button-burger;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-burger{
+    0%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        color:white;
+        border:1px solid white;
+    }
+    100%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+}
+#burger article{
+    width:80%;
+}
+
+#card4{
+    display:none;
+}
+#card4:checked~#steak{
+    cursor: default;
+}
+#card4:checked~#steak p{
+    transform:rotate3d(0,1,0,180deg);
+    transition:0.5s;
+    color:transparent;
+    visibility:hidden;
+}
+#card4:not(:checked)~#steak p{
+    transform:rotate3d(0,1,0,0deg);
+    transition:0.5s;
+}
+#card4:checked~#steak img{
+    animation-name:card-img-steak;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-steak{
+    99%{
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+    100%{
+        visibility: hidden;
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+}
+#card4:not(:checked)~#steak img{
+    animation-name:card-img-reverse-steak;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-reverse-steak{
+    0%{
+        opacity:0;
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    99%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        opacity:100%;
+    }
+    100%{
+        visibility: visible;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card4-back{
+    position:block;
+    position:absolute;
+    top:0;
+}
+#card4-1-back{ 
+    color:white;
+    font-family: "Speedee_regular",Arial,sans-serif;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-top:4rem;
+    margin-bottom:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:0.8rem;
+}
+#card4-2-back{
+    color:white;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:1.35rem;
+}
+#card4-4-back{
+    margin-top:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    transform:rotate3d(0,1,0, 180deg);
+    width:80%;
+    color:white;
+}
+#card4-4-back-a{
+    padding:1rem 2.3rem 1rem 2.3rem;
+    color:white;
+    margin-right:auto;
+    margin-left:auto;
+    text-decoration:none;
+    font-size:0.8rem;
+    border-radius:4px;
+    border:1px solid white;
+}
+#card4-4-back-a:hover{
+    border-width: 2px;
+    margin:-1px;
+}
+#card4:checked~#steak div{
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: 0.5s;
+}
+#card4:not(:checked)~#steak div{
+    visibility: hidden;
+    color:transparent;
+    transition:0.5s;
+}
+#card4:checked~#steak a{
+    animation-name:card-img-button-reverse-steak;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-reverse-steak{
+    0%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+    100%{
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card4:not(:checked)~#steak a{
+    animation-name:card-img-button-steak;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-steak{
+    0%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        color:white;
+        border:1px solid white;
+    }
+    100%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+}
+
+#card5{
+    display:none;
+}
+#card5:checked~#frites p{
+    transform:rotate3d(0,1,0,180deg);
+    transition:0.5s;
+    color:transparent;
+    visibility:hidden;
+}
+#card5:not(:checked)~#frites p{
+    transform:rotate3d(0,1,0,0deg);
+    transition:0.5s;
+}
+#card5:checked~#frites img{
+    animation-name:card-img-frites;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-frites{
+    /*rotation image*/
+    99%{
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+    100%{
+        visibility: hidden;
+        transform: rotate3d(0, 1, 0, 180deg);
+        opacity:0;
+    }
+}
+#card5:not(:checked)~#frites img{
+    animation-name:card-img-reverse-frites;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-reverse-frites{
+    0%{
+        opacity:0;
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    99%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        opacity:100%;
+    }
+    100%{
+        visibility: visible;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card5-back{
+    position:block;
+    position:absolute;
+    top:0;
+}
+#card5-1-back{ 
+    color:white;
+    font-family: "Speedee_regular",Arial,sans-serif;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-top:4rem;
+    margin-bottom:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:0.8rem;
+}
+#card5-2-back{
+    color:white;
+    transform: rotate3d(0, 1, 0, 180deg);
+    margin-right:auto;
+    margin-left:auto;
+    width:80%;
+    font-size:1.35rem;
+}
+#card5-4-back{
+    margin-top:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    transform:rotate3d(0,1,0, 180deg);
+    width:80%;
+    color:white;
+}
+#card5-4-back-a{
+    padding:1rem 2.3rem 1rem 2.3rem;
+    color:white;
+    margin-right:auto;
+    margin-left:auto;
+    text-decoration:none;
+    font-size:0.8rem;
+    border-radius:4px;
+    border:1px solid white;
+}
+#card5-4-back-a:hover{
+    border-width: 2px;
+    margin:-1px;
+}
+#card5:checked~#frites div{
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: 0.5s;
+}
+#card5:not(:checked)~#frites div{
+    visibility: hidden;
+    color:transparent;
+    transition:0.5s;
+}
+#card5:checked~#frites a{
+    animation-name:card-img-button-reverse-frites;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-reverse-frites{
+    0%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+    100%{
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+#card5:not(:checked)~#frites a{
+    animation-name:card-img-button-frites;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes card-img-button-frites{
+    0%{
+        transform: rotate3d(0, 1, 0, 0deg);
+        color:white;
+        border:1px solid white;
+    }
+    100%{
+        border-color: transparent;
+        color:transparent;
+        transition:0.5s;
+        pointer-events: none;
+    }
+}
+
+@media (max-width:1000px){
+    #composition{
+        max-width:95%;
+    }
+    .responsiveness2{
+        max-width:50%;
+    }
+    #macnuggets-img img{
+        max-width: 90%;
+    }
+    #pain-img img{
+        max-width: 90%;
+    }
+    #burger-img img{
+        max-width:90%;
+    }
+    #steak-img img{
+        max-width: 90%;
+    }
+    #frites-img img{
+        max-width: 50%;
+    }
+}
+@media (max-width:890px){
+    #macnuggets{
+        min-width:100%;
+        font-size:1.4rem;
+        margin-bottom:1.5rem;
+        height:25rem;
+    }
+    #macnuggets p{
+        width:100%;
+        margin-top:2.5rem;
+    }
+    #macnuggets-img{
+        margin-bottom:3.5rem;
+    }
+    #pain{
+        min-width:100%;
+        font-size:1.4rem;
+        height:25rem;
+    }
+    #pain p{
+        width:100%;
+        margin-top:1.5rem;
+    }
+    #pain-img{
+        position:relative;
+        margin-bottom:2.5rem;
+    }
+    #burger{
+        min-width:100%;
+        height:25rem;
+    }
+    #burger span{
+        flex-direction: column;
+    }
+    #burger p{
+        margin-bottom:0rem;
+        margin-top:1.5rem;
+        min-width:100%;
+        font-size:1.4rem;
+    }
+    #burger-img{
+        text-align: center;
+        margin-top:2rem;
+        margin-bottom:1.5rem;
+    }
+    #cross-black img{
+        width:4rem;
+    }
+    #steak{
+        margin-bottom:1.5rem;
+        min-width:100%;
+        font-size:1.4rem;
+        height:25rem;
+    }
+    #steak p{
+        width:100%;
+        margin-top:2rem;
+    }
+    #steak-img{
+        margin-right:auto;
+        margin-left:auto;
+    }
+    #frites{
+        min-width:100%;
+        font-size:1.4rem;
+        height:25rem;
+    }
+    #frites p{
+        width:100%;
+        margin-top:2rem;
+    }
+    #frites-img{
+        margin-left: auto;
+        margin-right:auto;
+    }
+}
+@media (max-width:800px){
+    .responsiveness{
+        max-width:90%;
+    }
+}
+#container2{
+    margin-left:auto;
+    margin-right:auto;
+    width:58rem;
+    max-width:95%;
+    color:rgba(0, 0, 0, 0.76);
+    margin-top:6rem;
+    font-family: "Speedee_regular",Arial,sans-serif;
+    font-size: 0.8rem;
+    margin-bottom:3.5rem;
+}
+
+
+
+
+
+/*FOOTER*/
+
+
+footer{
+    border-top:1px solid rgba(0, 0, 0, 0.12);
+    font-family: "Speedee",Arial,sans-serif;
+    color:rgba(0, 0, 0, 0.76);
+    font-size: 0.72rem;
+}
+#container3{
+    display:flex;
+    justify-content:center;
+}
+.column1{
+    margin-top:1rem;
+    height:max-content;
+    width:10rem;    
+}
+.column1 a{
+    font-family: "Speedee_regular",Arial,sans-serif;
+    text-decoration: none;
+    font-size:0.7rem;
+    color:rgba(0, 0, 0, 0.678);
+}
+#dark{
+    color:rgba(0, 0, 0, 0.836);
+}
+
+#container4{
+    display: none;
+    margin-top:1rem;
+}
+#container4 div{
+    padding:0.2rem;
+}
+#container4 hr{
+    width:92%;
+    color:rgba(0, 0, 0, 0.12);
+}
+#checked{
+    display:none;
+}
+#checked-label{
+    padding:0.6rem;
+    margin-right:3.6%;
+    cursor:pointer;
+    display:block;
+    margin-left:1rem;
+    font-weight: bold;
+}
+.checked-list{
+    display:none;
+}
+#checked:checked~.checked-list{
+    display:block;
+}
+#checked1{
+    display:none;
+}
+#checked-label1{
+    padding:0.6rem;
+    margin-right:3.6%;
+    cursor:pointer;
+    display:block;
+    margin-left:1rem;
+    font-weight: bold;
+}
+.checked-list1{
+    display:none;
+}
+#checked1:checked~.checked-list1{
+    display:block;
+}
+#checked2{
+    display:none;
+}
+#checked-label2{
+    padding:0.6rem;
+    margin-right:3.6%;
+    cursor:pointer;
+    display:block;
+    margin-left:1rem;
+    font-weight: bold;
+}
+.checked-list2{
+    display:none;
+}
+#checked2:checked~.checked-list2{
+    display:block;
+}
+#checked3{
+    display:none;
+}
+#checked-label3{
+    padding:0.6rem;
+    margin-right:3.6%;
+    cursor:pointer;
+    display:block;
+    margin-left:1rem;
+    font-weight: bold;
+}
+.checked-list3{
+    display:none;
+}
+#checked3:checked~.checked-list3{
+    display:block;
+}
+#checked4{
+    display:none;
+}
+#checked-label4{
+    padding:0.6rem;
+    margin-right:3.6%;
+    cursor:pointer;
+    display:block;
+    margin-left:1rem;
+    font-weight: bold;
+}
+.checked-list4{
+    display:none;
+}
+#checked4:checked~.checked-list4{
+    display:block;
+}
+#checked5{
+    display:none;
+}
+#checked-label5{
+    padding:0.6rem;
+    margin-right:3.6%;
+    cursor:pointer;
+    display:block;
+    margin-left:1rem;
+    font-weight: bold;
+}
+.checked-list5{
+    display:none;
+}
+#checked5:checked~.checked-list5{
+    display:block;
+}
+.checked-list-common li{
+    margin-left:-0.7rem;
+    list-style-type: none;
+    padding:0.25rem;
+}
+.checked-list-common a{
+    text-decoration:none;
+    padding:0.4rem;
+    color:rgba(0, 0, 0, 0.575);
+    font-size:0.58rem;
+}
+@media (max-width:890px){
+    #container3{
+        display:none;
+    }
+    #container4{
+        display:block;
+    }
+}
+
+#container5{
+    margin-right:auto;
+    margin-left:auto;
+    display:flex;
+    justify-content:left;
+    width:61.5rem;
+    max-width:95%;
+}
+#container5 img{
+    width:2.4rem;
+}
+#icon-resize img{
+    width:1.2rem;
+    margin-top:0.3rem;
+    margin-left:0.3rem;
+    margin-right:0.3rem;
+}
+
+#container6{
+    margin-top:1rem;
+    margin-bottom:1rem;
+    margin-right:auto;
+    margin-left:auto;
+    display:flex;
+    justify-content:space-evenly;
+    width:68rem;
+    max-width:95%;
+}
+#McDo{
+    display:flex;
+    align-items: center;
+}
+#McDo img{
+    width:2.1rem;
+    border-radius:0.2rem;
+}
+#télécharger1{
+    font-weight:bolder;
+    font-family:"Speedee_bold",Arial,sans-serif;
+}
+#télécharger2{
+    font-family: "Speedee_regular",Arial,sans-serif;
+    margin-top:-0.6rem;
+    font-size:0.6rem;
+}
+#store{
+    display:flex;
+    align-items:center;
+}
+#store img{
+    width:7rem;
+    height:2rem;
+    mix-blend-mode: color-burn;
+}
+@media (max-width:890px){
+    #container6{
+        flex-direction:column;
+    }
+}
+
+#container7{
+    font-family: "Speedee_regular",Arial,sans-serif;
+    justify-content:center;
+    display:flex;
+    margin-top:1rem;
+    margin-bottom:1.5rem;
+    margin-right:auto;
+    margin-left:auto;
+    width:68rem;
+    max-width:95%;
+}
+#container7 a{
+    text-decoration:none;
+    color:rgba(0, 0, 0, 0.822);
+    margin-right:0.5rem;
+    margin-left:0.5rem;
+    font-size:0.6rem;
+}
+#container7 span{
+    margin-left:1.5rem;
+    font-size:0.6rem;
+    color:rgba(0, 0, 0, 0.55);
+}
+
+#container8{
+    background-color:rgba(0, 0, 0, 0.075);
+    text-align:center;
+    color:rgba(0, 0, 0, 0.822);
+    font-size:0.6rem;
+    padding:0.26rem;
+    font-family: "Speedee_regular",Arial,sans-serif;
+}
+#container8 a{
+    text-decoration:none;
+    color:#264f36;
+}
+#container8 a:hover{
+    transition:0.3s;
+    color:rgb(0, 175, 0);
+}
+@media (max-width:890px){
+    #container7{
+        flex-direction:column;
+    }
+    #container7 a{/*padding for div!*/
+        margin-bottom:0.6rem;
+    }
+    #container7 span{
+        margin-left:0.4rem;
+    }
+}
